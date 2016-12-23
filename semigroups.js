@@ -5,7 +5,7 @@ const List = require('immutable').List;
  * Semigroups
  *
  * A Semigroup is a type that has a `.concat()` method and
- * allows for additive functionality.
+ * allows for associative functionality.
  *
  * A Semigroup can be promoted to a Monoid by defining an
  * `.empty()` method which returns the 'neutral'
@@ -87,6 +87,8 @@ const first = First(20)
 console.log(`The First value will be 20: ${first.inspect()}`);
 
 
+
+
 /**
  * This is the functional equivalent of the * operator.
  */
@@ -116,6 +118,8 @@ Any.empty = () => Any(false);
 
 
 
+
+
 /**
  * This is the functional equivalent of the > logical operator.
  */
@@ -131,7 +135,7 @@ Max.empty = () => Max(-Infinity);
 
 
 /**
- * This is the functional equivalent of the < operator.
+ * This is the functional equivalent of the < logical operator.
  */
 const Min = x => ({
     x,
@@ -140,4 +144,4 @@ const Min = x => ({
 });
 
 // Can be promoted to a Monoid
-Max.empty = () => Min(Infinity);
+Min.empty = () => Min(Infinity);
