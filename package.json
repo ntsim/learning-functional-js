@@ -1,0 +1,14 @@
+{
+  "name": "learning-functional",
+  "version": "0.1.0",
+  "description": "Learning functional paradigms",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicholas Tsim <nicholastsim@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "immutable": "^3.8.1"
+  }
+}
